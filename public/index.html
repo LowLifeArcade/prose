@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Pretext</title>
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background: #f7f5ef;
+        color: #1f2933;
+        font-family: Arial, sans-serif;
+      }
+
+      main {
+        width: min(520px, calc(100vw - 32px));
+      }
+
+      .pretext-output {
+        position: relative;
+        width: min(var(--measure-width), 100%);
+        height: var(--measure-height);
+        font: 32px Arial;
+        line-height: 40px;
+        border-left: 4px solid #e4572e;
+        padding-left: 18px;
+        box-sizing: border-box;
+      }
+
+      .pretext-output p {
+        position: absolute;
+        top: var(--y);
+        left: 18px;
+        margin: 0;
+      }
+
+      dl {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 8px 14px;
+        margin-top: 28px;
+        font-size: 14px;
+      }
+
+      dt {
+        color: #52616b;
+      }
+
+      dd {
+        margin: 0;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="pretext-output" aria-label="Hello world from Pretext"></section>
+      <dl>
+        <dt>Package</dt>
+        <dd data-field="packageName"></dd>
+        <dt>Lines</dt>
+        <dd data-field="lineCount"></dd>
+        <dt>Measured height</dt>
+        <dd data-field="height"></dd>
+      </dl>
+    </main>
+    <script type="module" src="/pretext-demo.js"></script>
+  </body>
+</html>
