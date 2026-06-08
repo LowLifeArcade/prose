@@ -23,6 +23,7 @@ if (output && packageName && lineCount && measuredHeight) {
     const element = document.createElement("p");
     element.style.setProperty("--y", `${index * helloLineHeight}px`);
     element.textContent = line.text;
+    // @ts-ignore
     output.append(element);
   }
 
